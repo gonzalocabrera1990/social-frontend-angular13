@@ -1,0 +1,7 @@
+* {
+    outline: none;
+}
+
+::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #3fb53f;
+}

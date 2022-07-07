@@ -1,0 +1,24 @@
+<div *ngIf="(stories | async )!" class="col-12 col-md-8 col-lg-6 offset-md-2 p-0" style="position: relative;">
+    <div class='stories-frame' #scrollStoriesContent>
+      <div *ngFor="let story of (stories | async )!.users.noSeen">
+        <div class='stories-img no-seen'>
+          <a routerLink="/stories/{{story.id._id}}/{{story.id.stories[0]._id}}">
+            <img src="{{baseURL + story.id.image.filename}}" alt="chatimgstatus" />
+          </a>
+        </div>
+      </div>
+      <div *ngFor="let story of (stories | async )!.users.seen">
+        <div class='stories-img'>
+          <a routerLink="/stories/{{story.id._id}}/{{story.id.stories[0]._id}}">
+            <img src="{{baseURL + story.id.image.filename}}" alt="chatimgstatus" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="cursor arrow-component-story arrow-component-story-left" (click)="scrollLeft()">
+      <span class="fa fa-angle-left"></span>
+    </div>
+    <div class="cursor arrow-component-story arrow-component-story-right" (click)="scrollRight()">
+      <span class="fa fa-angle-right"></span>
+    </div>
+  </div>

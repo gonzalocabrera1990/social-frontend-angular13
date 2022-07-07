@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div>
+    <div [hidden]="(content | async) || errMess">
+      <mat-spinner></mat-spinner>
+      <h4>Loading . . . Please Wait</h4>
+    </div>
+
+    <app-start-story></app-start-story>
+    <div *ngIf="(content | async)!">
+      <div *ngIf="(content | async)!.length === 0" class="nocontentitem">
+        <img src="/assets/images/start.png" alt="Red Social" class="nocontentimage">
+        <h6>Follow other users and <br /> see their content here.</h6>
+      </div>
+      <div *ngIf="(content | async)!.length > 0">
+        <app-start-items *ngFor="let c of (content | async)!" [item]="c"></app-start-items>
+      </div>
+    </div>
+    <app-follow-tab></app-follow-tab>
+  </div>
+</div>
