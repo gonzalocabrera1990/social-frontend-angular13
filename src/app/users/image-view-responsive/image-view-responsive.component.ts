@@ -25,16 +25,16 @@ export class ImageViewResponsiveComponent implements OnInit {
   data: any;
   likes: any = [];
   likeStatus: any;
-  comments: Comment[] | null;
-  mediaType: string;
-  likestate: boolean;
+  comments!: Comment[] | null;
+  mediaType!: string;
+  likestate!: boolean;
   playVideo: boolean = false;
-  deleteImageStatus: boolean;
+  deleteImageStatus!: boolean;
   loading: boolean = false;
-  errMess: string;
+  errMess!: string;
   public storage: string | null = localStorage.getItem("ID");
   @ViewChild('cform') commentFormDirective: any;
-  commentForm: FormGroup;
+  commentForm!: FormGroup;
   constructor(@Inject('baseURL') public baseURL: string,
     private window: Window,
     private readonly location: Location,

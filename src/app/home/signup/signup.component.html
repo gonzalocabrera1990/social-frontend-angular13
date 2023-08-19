@@ -34,7 +34,7 @@
             <mat-error *ngIf="formErrors.password">{{formErrors.password}}</mat-error>
         </mat-form-field>
         <mat-form-field>
-            <input type="password" matInput formControlName="confirmpassword" placeholder="confirmpassword">
+            <input type="password" matInput formControlName="confirmpassword" placeholder="confirm password">
             <mat-error *ngIf="formErrors.confirmpassword">{{formErrors.confirmpassword}}</mat-error>
         </mat-form-field>
         <mat-form-field>
@@ -55,6 +55,6 @@
                 <mat-error *ngIf="formErrors.country">{{formErrors.country}}</mat-error>
             </mat-select>
         </mat-form-field>
-        <button mat-raised-button color="success" [disabled]="signupForm.invalid">Send</button>
+        <button  mat-raised-button  [disabled]="signupForm.invalid">Send</button>
     </form>
 </div>

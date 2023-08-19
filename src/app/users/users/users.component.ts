@@ -24,21 +24,21 @@ import { Observable } from 'rxjs';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  username: string | null;
-  usuario: string | null;
+  username!: string | null;
+  usuario!: string | null;
   comentarios: any;
   modalmood: string = "user";
-  errMess: string;
-  heart: boolean;
-  user: Observable<User | null>;
-  album: ImagesWall[] | null;
-  carretel: ImagesWall[] | null;
-  like: Likes;
-  errmess: string;
-  following: boolean | null;
-  friendshipRequested: boolean | null;
-  stories: Observable<StoriesFilter | null>;
-  storiesAvailable: boolean;
+  errMess!: string;
+  heart!: boolean;
+  user!: Observable<User | null>;
+  album!: ImagesWall[] | null;
+  carretel!: ImagesWall[] | null;
+  like!: Likes;
+  errmess!: string;
+  following!: boolean | null;
+  friendshipRequested!: boolean | null;
+  stories!: Observable<StoriesFilter | null>;
+  storiesAvailable!: boolean;
   screenWidth: any;
   private storage: string = localStorage.getItem("ID")!;
   constructor(

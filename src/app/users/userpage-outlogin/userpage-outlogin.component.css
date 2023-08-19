@@ -67,6 +67,9 @@ img.profile {
 ::ng-deep.mat-tab-body-wrapper {
     width: 100%;
 }
+::ng-deep.mat-mdc-tab-body-wrapper {
+    width: 100%;
+}
 .labels-align {
     display: flex;
     align-items: center;

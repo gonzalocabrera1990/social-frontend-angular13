@@ -8,7 +8,8 @@ import { Image } from 'src/app/models/image.model';
   styleUrls: ['./profile-image.component.css']
 })
 export class ProfileImageComponent implements OnInit {
-  @Input() profileImage: Image;
+  @Input()
+  profileImage!: Image;
   @Output() newUploadEvent = new EventEmitter<File | null>();
   file:File | null = null;
   imageShowen: any = null;

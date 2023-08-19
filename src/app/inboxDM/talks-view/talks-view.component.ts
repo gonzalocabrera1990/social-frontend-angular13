@@ -8,7 +8,8 @@ import { Inbox } from 'src/app/models/inbox.model';
   styleUrls: ['./talks-view.component.css']
 })
 export class TalksViewComponent implements OnInit {
-  @Input() talks: Observable< Inbox[] | null >;
+  @Input()
+  talks!: Observable<Inbox[] | null>;
   @Output() loadTalkEvent = new EventEmitter<string>();
  
   

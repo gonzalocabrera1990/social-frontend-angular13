@@ -19,7 +19,7 @@
         </div>
         <div *ngIf="!commentsLoad" >
           <div class="comment-row" *ngFor="let com of comentarios">
-            <div class="d-flex" >
+            <div class="comment-item " >
             <div routerLink="/users/{{usuario}}/{{com.author.usuario}}" (click)="closeDialog()" class="cursor" >
                 <a>
                     <img class="comment" src="{{baseURL + com.author.image.filename}}" alt="user/friend" />

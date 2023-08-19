@@ -18,3 +18,9 @@
     color: rgb(227, 238, 227);
     background-color: rgb(63, 134, 63);
   }
+  @media (min-width: 820px) {
+    .deform {
+      width: 60%;
+      margin: auto;
+    }
+  }

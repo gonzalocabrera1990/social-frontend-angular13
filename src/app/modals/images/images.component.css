@@ -150,8 +150,14 @@ div.modalgroup {
     justify-content: space-between;
     margin-top: 12px;
   }
+  .comment-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
   .comment-content {
-    margin-left: 12px;
+    margin: 0 0 0 12px;
+    width: 100%;
   }
   .arrow-left{
     color: black;
@@ -172,7 +178,16 @@ div.modalgroup {
 
   h6 {
     font-size: 15px;
+    margin: 0;
+    padding: 0;
   }
+
+  .mat-mdc-button>.mat-icon {
+    width: 21px;
+    height: 21px;
+    font-size: 21px;
+  }
+
   
   @media (max-width: 991px) {
     .modal-body {

@@ -11,9 +11,10 @@ import { Observable } from 'rxjs';
   styleUrls: ['./follow-view.component.css']
 })
 export class FollowViewComponent implements OnInit {
-  @Input() follows: Observable< Following[] | null >;
+  @Input()
+  follows!: Observable<Following[] | null>;
   @Output() selectTalkEvent = new EventEmitter<string>();
-  errMess: string;
+  errMess!: string;
   constructor(private followService: FollowService, private store: Store<RootState>,
     @Inject('baseURL') public baseURL:string) { }
 

@@ -14,13 +14,13 @@ import { selectUser } from '../models/store/user/user.selectors';
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
-  settingsForm: FormGroup;
+  settingsForm!: FormGroup;
   @ViewChild('cform') settingsFormDirective: any;
-  check: boolean;
-  statusCheck: string;
-  loading: boolean;
+  check!: boolean;
+  statusCheck!: string;
+  loading!: boolean;
   status: boolean = true
-  errMess: string;
+  errMess!: string;
   formErrors: any = {
     'firstname': '',
     'lastname': '',
@@ -54,10 +54,10 @@ export class SettingsComponent implements OnInit {
   
   createForm() {
     this.settingsForm = this.fb.group({
-      firstname: ['', Validators.maxLength(30)],
-      lastname: ['', Validators.maxLength(30)],
-      phrase: ['', Validators.maxLength(100)],
-      status: ''
+      firstname: ['', [Validators.minLength(1), Validators.maxLength(30)]],
+      lastname: ['', [Validators.minLength(1), Validators.maxLength(30)]],
+      phrase: ['', [Validators.minLength(2), Validators.maxLength(100)]],
+      status: ['', Validators.required]
     }, { validator:this.atLeastOneValidator()});
     this.settingsForm.valueChanges
     .subscribe(data => this.onValueChanged(data));

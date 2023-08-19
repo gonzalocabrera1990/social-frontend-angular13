@@ -31,19 +31,18 @@ export class SignupComponent implements OnInit {
     },
     'password': {
       'required': 'A password is required.',
-      'minlength': 'First Name must be at least 2 characters long.',
-      'maxlength': 'FirstName cannot be more than 25 characters long.'
+      'minlength': 'Password must be at least 6 characters long.',
+      'maxlength': 'Password cannot be more than 30 characters long.'
     },
     'confirmpassword': {
       'required': 'A password is required.',
-      'pattern': 'First Name must be at least 2 characters long.'
+      'pattern': 'Passwords must be equal.'
     },
     'gender': {
-      'required': 'Gender number is required.'
+      'required': 'Gender is required.'
     },
     'date': {
-      'required': 'Date is required.',
-      'email': 'Email not in valid format.'
+      'required': 'Date is required.'
     },
     'country': {
       'required': 'Country is required.'
@@ -61,7 +60,7 @@ export class SignupComponent implements OnInit {
   createForm() {
     this.signupForm = this.fb.group({
       email: ['', [Validators.required, Validators.pattern(this.expreg)]],
-      password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(300)]],
+      password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(30)]],
       confirmpassword: ['', Validators.required],
       gender: ['', Validators.required],
       date: ['', Validators.required],
@@ -111,6 +110,8 @@ export class SignupComponent implements OnInit {
         // clear previous error message (if any)
         this.formErrors[field] = '';
         const control = form.get(field);
+        console.log('CONTROL', control);
+        
         if (control && control.dirty && !control.valid) {
           const messages = this.validationMessages[field];
           for (const key in control.errors) {

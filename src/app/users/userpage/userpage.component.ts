@@ -24,24 +24,24 @@ import { Observable } from 'rxjs';
   styleUrls: ['./userpage.component.css']
 })
 export class UserpageComponent implements OnInit {
-  user: Observable< User | null>;
-  album: ImagesWall[];
-  carretel: ImagesWall[];
-  like: Likes;
+  user!: Observable<User | null>;
+  album!: ImagesWall[];
+  carretel!: ImagesWall[];
+  like!: Likes;
   comentarios: any;
-  usuario: string;
+  usuario!: string;
   modalmood: string = "user";
-  errMess: string;
-  heart: boolean;
+  errMess!: string;
+  heart!: boolean;
   file: File | null = null;
   myVideos:any = [];
-  loadWallType: string;
-  setIsFormatModalOpen: boolean;
-  setIsTimeModalOpen: boolean;
+  loadWallType!: string;
+  setIsFormatModalOpen!: boolean;
+  setIsTimeModalOpen!: boolean;
   loadWall: File | null = null;
   duration: any;
   screenWidth: any;
-  message: string;
+  message!: string;
   loadingFile: boolean = false;
   
   constructor(

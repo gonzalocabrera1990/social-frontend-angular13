@@ -35,7 +35,19 @@ div.modalComments {
   margin-right: 15px;
 }
 .comment-content {
+  width: 100%;
   display: flex;
+}
+.comment-img {
+  width: 26%;
+}
+.comment-msg {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.comment-msg p{
+  margin: 0 ;
 }
 .c {
   width: 63%;
@@ -58,6 +70,14 @@ div.modalComments {
 .foot button {
   color: black;
   background-color: transparent;
+}
+.fa{
+  font-size: 35px;
+}
+.mat-mdc-button>.mat-icon {
+  width: 21px;
+  height: 21px;
+  font-size: 21px;
 }
 .form-area {
   display: flex;
@@ -149,7 +169,7 @@ img.comment{
 button {
   outline: none;
 }
-@media (max-width: 747px) {
+@media (max-width: 767px) {
   div.modalgroup {
     display: inline-block;
     width: 100%;
@@ -161,6 +181,12 @@ button {
     flex-direction: column-reverse;
     width: 100%;
     margin: 0px;
+  }
+  .comment-img {
+    width: 12%;
+  }
+  .comment-msg {
+    width: 84%;
   }
   div.comm-likes  {
     margin: 15px auto auto 20px;

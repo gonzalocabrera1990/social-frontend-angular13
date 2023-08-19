@@ -8,7 +8,8 @@ import { Inbox } from 'src/app/models/inbox.model';
 })
 export class TalkComponent implements OnInit {
 
-  @Input() talk: Inbox | null;
+  @Input()
+  talk!: Inbox | null;
   @Output() talkEvent = new EventEmitter<string>();
   public currentUser: string | null = localStorage.getItem("ID");
   public readStatus: boolean | null = true;

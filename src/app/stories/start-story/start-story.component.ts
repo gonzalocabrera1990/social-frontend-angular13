@@ -11,9 +11,10 @@ import { selectStories } from '../../models/store/stories/stories.selectors';
   styleUrls: ['./start-story.component.css']
 })
 export class StartStoryComponent implements OnInit {
-  @ViewChild('scrollStoriesContent') scrollStoriesContent: ElementRef;
-  stories: Observable < any >;
-  errMess: string;
+  @ViewChild('scrollStoriesContent')
+  scrollStoriesContent!: ElementRef;
+  stories!: Observable<any>;
+  errMess!: string;
   constructor(private followService: FollowService,
     @Inject('baseURL') public baseURL:string,
     private store: Store<RootState> ) { }

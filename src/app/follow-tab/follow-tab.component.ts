@@ -15,10 +15,10 @@ import { Observable } from 'rxjs';
   styleUrls: ['./follow-tab.component.css']
 })
 export class FollowTabComponent implements OnInit {
-  followers: Observable< Followers[] | null >;
-  following: Observable< Following[] | null >
-  usuario: string;
-  errMess: string;
+  followers!: Observable<Followers[] | null>;
+  following!: Observable<Following[] | null>;
+  usuario!: string;
+  errMess!: string;
     constructor(private followService: FollowService, private store: Store<RootState>,
       @Inject('baseURL') public baseURL:string) { }
 

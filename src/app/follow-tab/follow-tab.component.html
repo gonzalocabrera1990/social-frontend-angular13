@@ -1,24 +1,26 @@
 <div class="d-none d-lg-block  col-3 sidenav">
     <mat-tab-group animationDuration="0ms" mat-align-tabs="start" class="aaa">
       <mat-tab label="Following">
+        <div>
         <div *ngFor="let f of (following | async)!" class="grida cursor" routerLink="/users/{{usuario}}/{{f.id.usuario}}">
-          <div>
+          <div class="content-items">
             <img src="{{baseURL + f.id.image.filename}}" alt="chatimgstatus" />
         </div>
   
-        <div >
+        <div class="content-items" >
             <h6 id="f.id._id" >{{f.id.firstname}} {{f.id.lastname}}</h6>
         </div>
         </div>
+      </div>
       </mat-tab>
   
       <mat-tab label="Followers">
         <div *ngFor="let f of (followers | async)!" class="grida cursor" routerLink="/users/{{usuario}}/{{f.id.usuario}}">
-          <div>
+          <div class="content-items" >
             <img src="{{baseURL + f.id.image.filename}}" alt="chatimgstatus" />
           </div>
   
-        <div >
+        <div class="content-items" >
             <h6 id="f.id._id" >{{f.id.firstname}} {{f.id.lastname}}</h6>
         </div>
         </div>

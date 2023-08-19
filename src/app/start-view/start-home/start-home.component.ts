@@ -14,8 +14,8 @@ import { Observable } from 'rxjs';
 })
 export class StartHomeComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'container';
-  content: Observable<Content[] | null>;
-  errMess: string;
+  content!: Observable<Content[] | null>;
+  errMess!: string;
   constructor(private contentService: StartContentService,
     private store: Store<RootState>,
     private likeService: LikeHandleService) { }

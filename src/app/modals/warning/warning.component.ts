@@ -7,7 +7,8 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./warning.component.css']
 })
 export class WarningComponent {
-  @Input() warning: string;
+  @Input()
+  warning!: string;
   constructor(public dialogRef: MatDialogRef<WarningComponent>) { }
 
   closeDialog(){

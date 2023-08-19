@@ -19,14 +19,16 @@ import { Observable } from 'rxjs';
   styleUrls: ['./start-items.component.css']
 })
 export class StartItemsComponent implements OnInit {
-  @Input() item: Content | ContentVideo;
-  @Input() carrusel: Album[];
-  comments: Comment[];
-  like: Observable<Likes | null>;
-  likesItem: User[];
-  usuario: string;
+  @Input()
+  item!: Content | ContentVideo;
+  @Input()
+  carrusel!: Album[];
+  comments!: Comment[];
+  like!: Observable<Likes | null>;
+  likesItem!: User[];
+  usuario!: string;
   modalmood: string = "start";
-  errMess: string;
+  errMess!: string;
   heart: boolean = false;
   commentLength: number = 0;
   playVideo: boolean = false;

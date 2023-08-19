@@ -25,17 +25,17 @@ import { InboxService } from '../../services/inbox.service';
 export class NavbarComponent implements OnInit {
   private storage: string | null = localStorage.getItem("ID");
   searchTerm: string | null = "";
-  usuario: string | null;
-  visibled: boolean | null;
-  searchResults: User[] | null;
+  usuario!: string | null;
+  visibled!: boolean | null;
+  searchResults!: User[] | null;
   user: Observable<User | null>;
-  public errMess: string | null;
+  public errMess!: string | null;
   notificationStyle: boolean | null = false;
-  notificationStatus: boolean | null;
+  notificationStatus!: boolean | null;
   navbarStyle: boolean | null = false;
-  notifications: Observable<Notifications[] | null>;
-  inbox: Observable<Inbox[] | null>;
-  inboxStatus: boolean | null;
+  notifications!: Observable<Notifications[] | null>;
+  inbox!: Observable<Inbox[] | null>;
+  inboxStatus!: boolean | null;
   colorful: string | null = "red";
 
   constructor(

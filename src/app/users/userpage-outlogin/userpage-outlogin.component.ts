@@ -8,9 +8,9 @@ import { UsersService } from '../../services/users.service';
   styleUrls: ['./userpage-outlogin.component.css']
 })
 export class UserpageOutloginComponent implements OnInit {
-  username: string | null;
-  usuario: string | null;
-  errMess: string | null;
+  username!: string | null;
+  usuario!: string | null;
+  errMess!: string | null;
   user: any;
   private storage: string | null = localStorage.getItem("ID");
   constructor(

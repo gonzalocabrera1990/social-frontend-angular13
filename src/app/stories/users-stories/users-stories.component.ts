@@ -14,17 +14,17 @@ import { FollowService } from '../../services/follow.service';
   styleUrls: ['./users-stories.component.css']
 })
 export class UsersStoriesComponent implements OnInit {
-  stories: StoriesFilter | null;
-  usuario: string | null;
+  stories!: StoriesFilter | null;
+  usuario!: string | null;
   allDisplayStory: any;
   currentDisplayStory: any;
-  indexDisplayStory: number;
+  indexDisplayStory!: number;
   indexTime: any;
   nextIndex: number = 0;
-  currentMediaDisplay: string;
+  currentMediaDisplay!: string;
   timeoutfunction: any;
-  errMess: string;
-  userId: string | null;
+  errMess!: string;
+  userId!: string | null;
   source: string | null = null;
   screenWidth: any;
 

@@ -137,6 +137,9 @@ img.profile {
 ::ng-deep.mat-tab-body-wrapper {
     width: 100%;
 }
+::ng-deep.mat-mdc-tab-body-wrapper {
+    width: 100%;
+}
 .labels-align {
     display: flex;
     align-items: center;
@@ -150,7 +153,6 @@ img.profile {
     flex-direction: row;
     flex-wrap: wrap;
     box-sizing: border-box;
-    margin: auto 5%;
 }
 
 .image-content {

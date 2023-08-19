@@ -7,9 +7,10 @@ import { User } from '../../models/user.model';
   styleUrls: ['./likes.component.css']
 })
 export class LikesComponent implements OnInit {
-  @Input() likes: User[];
+  @Input()
+  likes: User[] = [];
   @Output() closeDialogsEvent = new EventEmitter();
-  usuario: string;
+  usuario!: string;
   constructor(@Inject('baseURL') public baseURL:string) { }
 
   ngOnInit() {

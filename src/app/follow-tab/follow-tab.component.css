@@ -9,7 +9,7 @@
     height: 60vh;
   }
   .grida {
-  display: grid;
+  /* display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -17,8 +17,10 @@
   grid-auto-columns: minmax(30%, 30%);
   align-items: center;
   border-radius: 20%;
-  overflow-x: hidden;
-  
+  overflow-x: hidden; */
+  display: flex;
+  align-items: center;
+  margin: 10px;
 
   }
   .grida * {
@@ -36,17 +38,21 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     align-items: center;
-    margin-left: 30px;
+    margin: 0;
   }
   img{
-  margin-top: 10px;
-  margin-left: 10px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   max-width: auto;
   min-width: auto;
   object-fit: cover;
+  }
+  .content {
+    height: 100%;
+  }
+  .content-items{
+    margin-left: 10px;
   }
   
   @media (max-width: 1000px) {

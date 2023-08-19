@@ -9,14 +9,17 @@ import { Inbox, Talking } from 'src/app/models/inbox.model';
   styleUrls: ['./chat-view.component.css']
 })
 export class ChatViewComponent implements OnInit {
-  @Input() maintalk: Inbox | null;
-  @Input() newTalkStatus: boolean;
-  @Input() newTalkUser: Following | null;
+  @Input()
+  maintalk!: Inbox | null;
+  @Input()
+  newTalkStatus!: boolean;
+  @Input()
+  newTalkUser!: Following | null;
   @Output() sendMessageEvent = new EventEmitter<Talking>();
   @ViewChild('cform') commentFormDirective: any;
-  commentForm: FormGroup;
+  commentForm!: FormGroup;
   public storage: string = localStorage.getItem("ID")!;
-  usuario: string;
+  usuario!: string;
 
   constructor(private fb: FormBuilder, @Inject('baseURL') public baseURL:string) { }
 

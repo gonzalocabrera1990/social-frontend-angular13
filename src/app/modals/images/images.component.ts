@@ -18,22 +18,27 @@ import { LikeHandleService } from '../../services/like-handle.service';
 })
 export class ImagesComponent implements OnInit {
   likes: User[] = [];
-  errMess: string;
+  errMess!: string;
   @Input() moody:any;
-  @Input() moodstate: string;
-  @Input() carrousel: ImagesWall[] | null;
-  @Input() comments: Comment[];
-  @Input() mediaType: string;
-  @Input('comentarios') comentarios: Comment[] | null;
+  @Input()
+  moodstate!: string;
+  @Input()
+  carrousel!: ImagesWall[] | null;
+  @Input()
+  comments!: Comment[];
+  @Input()
+  mediaType!: string;
+  @Input('comentarios')
+  comentarios!: Comment[] | null;
   @Output() newItemEvent = new EventEmitter<string>();
   @Output() newCommentEvent = new EventEmitter<CommentParameter>();
   @Output() newCommentEventUserComponent = new EventEmitter<CommentParameter>();
   @Output() deleteCommentEvent = new EventEmitter<string>();
   @ViewChild('cform') commentFormDirective:any;
   public storage: string | null = localStorage.getItem("ID");
-  public usuario: string;
-  commentForm: FormGroup;
-  likestate: boolean | null;
+  public usuario!: string;
+  commentForm!: FormGroup;
+  likestate!: boolean | null;
   back: boolean = true;
   forth: boolean = true;
   playVideo: boolean = false;

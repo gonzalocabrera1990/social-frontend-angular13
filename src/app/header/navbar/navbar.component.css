@@ -196,6 +196,14 @@
   .mat-button {
    min-width: 55px;
   }
+
+  span.fa{
+    font-size: 21px;
+  }
+  .nav-buttons {
+    display: flex;
+    align-items: center;
+  }
   @media(max-width:392px){
     .notifications {
       width: 100vw;

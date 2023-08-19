@@ -171,9 +171,9 @@ const config: SocketIoConfig = {
       multi: true
     },
   ],
-  entryComponents: [
-    LoginupComponent
-  ],
+  // entryComponents: {
+  //   LoginupComponent
+  // },
   bootstrap: [AppComponent]
 })
 export class AppModule { }

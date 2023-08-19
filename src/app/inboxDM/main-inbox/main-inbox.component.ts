@@ -16,12 +16,12 @@ import { Observable, map, filter } from 'rxjs';
 })
 export class MainInboxComponent implements OnInit, OnDestroy {
   private currentUser: string = localStorage.getItem("ID")!;
-  follows: Observable<Following[] | null>;
-  talks: Observable<Inbox[] | null>;
-  maintalk: Inbox | null;
-  errMess: string;
-  newTalkStatus: boolean;
-  newTalkUser: Following | null;
+  follows!: Observable<Following[] | null>;
+  talks!: Observable<Inbox[] | null>;
+  maintalk!: Inbox | null;
+  errMess!: string;
+  newTalkStatus!: boolean;
+  newTalkUser!: Following | null;
 
   constructor(private inboxService: InboxService,
     private store: Store<RootState>,
